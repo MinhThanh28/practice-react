@@ -41,34 +41,34 @@
 
 .actions button:hover,
 .actions button:active {
-  background-color: #5a1a01;
-  border-color: #5a1a01;
+  background-color: #f3edeb;
+  border-color: #0e0400;
   color: white;
 }
 
 .actions1 button:hover,
 .actions1 button:active {
-  background-color: #5a1a01;
-  border-color: #5a1a01;
+  background-color: #ebe4e1;
+  border-color: #f7f4f3;
   color: white;
 }
 
 .actions .button--alt {
-  color: #8a2b06;
+  color: #030100;
 
 }
 
 .actions1 .button--alt {
-  color: #8a2b06;
+  color: #0c0401;
 
 }
 
 .actions .button {
-  background-color: #8a2b06;
+  background-color: #050200;
   color: white;
 }
 
 .actions1 .button {
-  background-color: #8a2b06;
+  background-color: #0e0400;
   color: white;
 }

@@ -21,7 +21,7 @@
 
 .price {
   font-weight: bold;
-  color: #8a2b06;
+  color: #0e0400;
 }
 
 .amount {
@@ -51,7 +51,7 @@
   font: inherit;
   font-weight: bold;
   font-size: 1.25rem;
-  color: #8a2b06;
+  color: #0c0401;
   border: 1px solid #8a2b06;
   width: auto;
   text-align: center;

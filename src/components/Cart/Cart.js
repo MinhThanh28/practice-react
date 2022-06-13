@@ -5,7 +5,7 @@ import CartItem from "./CartItem";
 import classes from "./Cart.module.css";
 import CartContext from "../../store/cart-context";
 import Checkout from "./Checkout";
-import Next from "./Next"
+import Next from "./Next";
 
 const Cart = (props) => {
   const [isNext, setIsNext] = useState(false);
@@ -16,7 +16,6 @@ const Cart = (props) => {
   const cartCtx = useContext(CartContext);
 
   const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
-  // const hasItems = cartCtx.items.length > 0;
   const [hasItems, sethasItems] = useState(cartCtx.items.length > 0);
 
   const cartItemRemoveHandler = (id) => {
@@ -32,19 +31,14 @@ const Cart = (props) => {
   };
 
   const putNextHandler = (person) => {
-    // const arr= []
-    // arr.push(person)
-    // arr.map((per)=> (
-      cartCtx.addNext({
+    cartCtx.addNext({
       name: person.name,
       street: person.street,
       city: person.city,
       postalCode: person.postalCode,
       country: person.country,
-      })
-    // ))
-//  console.log(arr)
-  }
+    });
+  };
 
   const nextHandler = () => {
     setIsNext(true);
@@ -52,12 +46,9 @@ const Cart = (props) => {
     sethasItems(false);
   };
 
-
   const orderHandler = () => {
     setIsCheckout(true);
   };
-
-
 
   const removeAllHandler = () => {
     cartCtx.clearCart();
@@ -78,7 +69,6 @@ const Cart = (props) => {
     setIsSubmitting(false);
     setDidSubmit(true);
     cartCtx.clearCart();
-    //console.log(userData)
   };
 
   const cartItems = (
@@ -98,7 +88,6 @@ const Cart = (props) => {
     </ul>
   );
 
-
   const modalActions = (
     <div>
       <div className={classes.actions1}>
@@ -108,7 +97,7 @@ const Cart = (props) => {
       </div>
       <div className={classes.actions}>
         {hasItems && (
-          <div >
+          <div>
             <button className={classes.button} onClick={orderHandler}>
               Checkout
             </button>
@@ -129,12 +118,15 @@ const Cart = (props) => {
         <span>{totalAmount}</span>
       </div>
       {isCheckout && (
-        <Checkout onConfirm={submitOrderHandler} onCancel={props.onClose} onNext={ nextHandler  } onConfirmNext={putNextHandler} />
+        <Checkout
+          onConfirm={submitOrderHandler}
+          onCancel={props.onClose}
+          onNext={nextHandler}
+          onConfirmNext={putNextHandler}
+        />
       )}
       {!isCheckout && modalActions}
-      {isNext && (
-        <Next />
-      )}
+      {isNext && <Next />}
     </React.Fragment>
   );
 

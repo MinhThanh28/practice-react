@@ -10,7 +10,6 @@ const MealItem = (props) => {
   const price = `$${props.price.toFixed(2)}`;
 
   const addToCartHandler = (amount) => {
-    // cartCtx.addItem({
     if (amount > 1) {
       cartCtx.addFewItem({
         id: props.id,
@@ -34,7 +33,6 @@ const MealItem = (props) => {
   return (
     <li className={classes.meal}>
       <div>
-      {/* <img src=`../../../assets/${props.image}` alt='' width="180" height="100" /> */}
       <img src={require(`../../../assets/${props.image}`)} alt='' width="180" height="100"/>
         <h3>{props.name}</h3>
         <div className={classes.description}>{props.description}</div>
