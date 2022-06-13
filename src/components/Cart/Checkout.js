@@ -150,20 +150,16 @@ const nextHandler = (event) => {
 
   const countrylist = [
     {
-      value: "vietnamese",
-      label: "Vietnamese",
+      value: "VietNam",
+      label: "VietNam",
     },
     {
-      value: "france",
-      label: "France",
+      value: "USA",
+      label: "USA",
     },
     {
-      value: "cam",
-      label: "Cambodia",
-    },
-    {
-      value: "laos",
-      label: "Laos",
+      value: "Japan",
+      label: "Japan",
     },
   ];
 
